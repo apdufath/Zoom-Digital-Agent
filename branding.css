@@ -1,0 +1,75 @@
+/* Branding gallery + detail pages only */
+
+.branding-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(42, 20, 20, 0.55);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.branding-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(196, 30, 36, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.branding-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  padding: 0.75rem;
+  background: #0a0a0a;
+}
+
+.branding-card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.branding-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 60vh;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0a0a0a;
+}
+
+.branding-full img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.branding-explore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #e03a40 0%, #c41e24 55%, #b51b20 100%);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.55rem 1.15rem;
+  box-shadow: 0 8px 20px rgba(196, 30, 36, 0.28);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.branding-explore:hover {
+  filter: brightness(1.06);
+  transform: scale(1.03);
+}

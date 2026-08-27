@@ -505,16 +505,180 @@ html:not(.dark) .theme-toggle .icon-sun {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent 55%);
 }
 
-@media (hover: hover) {
-  .showcase-card .showcase-overlay {
-    opacity: 0.85;
-    transition: opacity 0.35s ease;
-  }
+.showcase-card--carousel:hover .showcase-media {
+  transform: none;
+}
 
-  .showcase-card:hover .showcase-overlay {
-    opacity: 1;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.2) 60%);
-  }
+/* World Breastfeeding Week 2025 — campaign identity (not Zoom red/black) */
+.wbw-slider {
+  z-index: 0;
+}
+
+.wbw-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wbw-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  height: 100%;
+}
+
+.wbw-mock {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, #157a43 0%, #3cb371 38%, #f0b429 72%, #e36c12 100%);
+}
+
+.wbw-mock--stage {
+  background: linear-gradient(180deg, #1a8f4e 0%, #f4a261 55%, #d35400 100%);
+}
+
+.wbw-mock--backdrop {
+  background: linear-gradient(135deg, #0f7a45 0%, #7bc47f 40%, #f6c445 100%);
+}
+
+.wbw-mock--rollup {
+  background: linear-gradient(180deg, #188a4a, #f6b042);
+}
+
+.wbw-mock--rollup-alt {
+  background: linear-gradient(200deg, #f6b042 0%, #2e9b57 55%, #146b38 100%);
+}
+
+.wbw-mock--id {
+  background: linear-gradient(120deg, #2fa45e, #f4a261);
+}
+
+.wbw-mock--scarf {
+  background: linear-gradient(90deg, #157a43, #e67e22);
+}
+
+.wbw-mock--cap {
+  background: radial-gradient(circle at 50% 40%, #f6c445 0%, #1b8a4a 70%);
+}
+
+.wbw-mock--polo {
+  background: linear-gradient(165deg, #3cb371, #e36c12);
+}
+
+.wbw-mock--poster {
+  background: linear-gradient(160deg, #146b38 0%, #f0b429 100%);
+}
+
+.wbw-mock--billboard {
+  background: linear-gradient(90deg, #188a4a 0%, #f4a261 50%, #d35400 100%);
+}
+
+.wbw-lockup {
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #fff8ee;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='48' cy='36' r='13' fill='%23157a43'/%3E%3Ccircle cx='78' cy='50' r='9' fill='%23e36c12'/%3E%3Cellipse cx='56' cy='78' rx='30' ry='24' fill='%231b8a4a'/%3E%3Cpath d='M38 58c12 28 40 26 52 4' fill='none' stroke='%23f0b429' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M42 28c8-10 22-8 26 2' fill='none' stroke='%23e36c12' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 58%;
+  background-size: 72%;
+  box-shadow: 0 8px 24px rgba(20, 60, 30, 0.25);
+}
+
+.wbw-lockup--sm {
+  width: 38%;
+}
+
+.wbw-lockup--xs::after {
+  display: none;
+}
+
+.wbw-lockup::after {
+  content: "Prioritise Breastfeeding";
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  width: 70%;
+  transform: translateX(-50%);
+  color: #146b38;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.wbw-lockup {
+  position: relative;
+}
+
+.wbw-deliverable {
+  margin-top: 0.85rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 9999px;
+  background: rgba(255, 248, 238, 0.92);
+  color: #146b38;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.wbw-nav {
+  position: absolute;
+  top: 42%;
+  z-index: 5;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+.wbw-nav--prev { left: 8px; }
+.wbw-nav--next { right: 8px; }
+
+.wbw-dots {
+  position: absolute;
+  right: 0;
+  bottom: 4.75rem;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.wbw-dots .slider-dot {
+  background: rgba(255, 248, 238, 0.45);
+}
+
+.wbw-dots .slider-dot.is-active {
+  background: #f0b429;
+}
+
+.wbw-mock--slot {
+  height: 120px;
+  border-radius: 0.75rem;
+}
+
+.wbw-slot figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.wbw-details[hidden] {
+  display: none;
 }
 
 /* ---------- Testimonials slider ---------- */
@@ -662,6 +826,7 @@ html:not(.dark) .form-field::placeholder {
   .hero-lens,
   .wave-draw .wave-path,
   .slider-track,
+  .wbw-track,
   .showcase-card .showcase-media,
   .btn-primary,
   .btn-outline {

@@ -267,6 +267,98 @@
     startAuto();
   }
 
+  /* ---------- Showcase mini-sliders (e.g. WBW campaign card) ---------- */
+  document.querySelectorAll("[data-mini-slider]").forEach(function (slider) {
+    const track = slider.querySelector(".wbw-track");
+    const slides = slider.querySelectorAll(".wbw-slide");
+    const prevBtn = slider.querySelector("[data-slider-prev]");
+    const nextBtn = slider.querySelector("[data-slider-next]");
+    const dotsWrap = slider.querySelector("[data-slider-dots]");
+    if (!track || !slides.length) return;
+
+    let index = 0;
+    const total = slides.length;
+
+    function goTo(i) {
+      index = (i + total) % total;
+      track.style.transform = "translateX(-" + index * 100 + "%)";
+      if (dotsWrap) {
+        dotsWrap.querySelectorAll(".slider-dot").forEach(function (dot, n) {
+          dot.classList.toggle("is-active", n === index);
+        });
+      }
+    }
+
+    if (dotsWrap) {
+      slides.forEach(function (_slide, n) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "slider-dot" + (n === 0 ? " is-active" : "");
+        btn.setAttribute("aria-label", "Campaign mockup " + (n + 1));
+        btn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          goTo(n);
+        });
+        dotsWrap.appendChild(btn);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        goTo(index - 1);
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        goTo(index + 1);
+      });
+    }
+
+    let touchStartX = 0;
+    slider.addEventListener(
+      "touchstart",
+      function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
+    slider.addEventListener(
+      "touchend",
+      function (e) {
+        const dx = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(dx) > 40) {
+          goTo(dx < 0 ? index + 1 : index - 1);
+        }
+      },
+      { passive: true }
+    );
+
+    goTo(0);
+  });
+
+  /* ---------- WBW showcase "View more" ---------- */
+  const wbwToggle = document.querySelector("[data-wbw-toggle]");
+  const wbwDetails = document.getElementById("wbw-details");
+  if (wbwToggle && wbwDetails) {
+    wbwToggle.addEventListener("click", function () {
+      const open = wbwDetails.hasAttribute("hidden");
+      if (open) {
+        wbwDetails.removeAttribute("hidden");
+        wbwDetails.classList.remove("hidden");
+        wbwToggle.setAttribute("aria-expanded", "true");
+        wbwToggle.textContent = "View less";
+        wbwDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      } else {
+        wbwDetails.setAttribute("hidden", "");
+        wbwDetails.classList.add("hidden");
+        wbwToggle.setAttribute("aria-expanded", "false");
+        wbwToggle.textContent = "View more";
+      }
+    });
+  }
+
   /* ---------- Back to top ---------- */
   if (backToTop) {
     backToTop.addEventListener("click", function () {

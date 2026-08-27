@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("zoom-theme") === "light") {
+            document.documentElement.classList.remove("dark");
+          } else {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <meta name="description" content="Hats — Branding — Zoom Digital Agency branding." />
+    <title>Hats — Branding | Zoom Digital Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: { red: "#C41E24", dark: "#1A1A1A", gold: "#C9A876", light: "#F7F7F7", ink: "#0D0D0D", panel: "#2A1414", muted: "#D1D1D1" },
+            },
+            fontFamily: { sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../branding.css" />
+  </head>
+  <body class="font-sans antialiased">
+    
+    <header class="site-header fixed inset-x-0 top-0 z-50">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6" aria-label="Primary">
+        <a href="../index.html#home" class="flex items-center shrink-0">
+          <img src="../assets/logo.png" alt="Zoom Digital Agency — ZOOM HD" class="h-12 w-auto md:h-14" />
+        </a>
+        <ul class="hidden items-center gap-5 lg:flex xl:gap-6">
+          <li><a class="nav-link" href="../index.html#home">Home</a></li>
+          <li><a class="nav-link" href="../index.html#about">About</a></li>
+          <li><a class="nav-link" href="../index.html#services">Services</a></li>
+          <li><a class="nav-link" href="../index.html#why-us">Why Us</a></li>
+          <li><a class="nav-link" href="../index.html#showcase">Showcase</a></li>
+          <li><a class="nav-link is-active" href="index.html">Branding</a></li>
+          <li><a class="nav-link" href="../index.html#testimonials">Testimonials</a></li>
+          <li><a class="nav-link" href="../index.html#partnerships">Partnerships</a></li>
+          <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-2">
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to light mode" aria-pressed="true">
+            <i data-lucide="moon" class="icon-moon h-4 w-4"></i>
+            <i data-lucide="sun" class="icon-sun h-4 w-4"></i>
+          </button>
+          <button id="menu-toggle" class="hamburger lg:hidden" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="mobile-panel lg:hidden absolute inset-x-0 top-full border-t border-white/10 bg-black/95 px-4 py-6 backdrop-blur-md">
+        <ul class="flex flex-col gap-1">
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#home">Home</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#about">About</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#services">Services</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#why-us">Why Us</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#showcase">Showcase</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="index.html">Branding</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#testimonials">Testimonials</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#partnerships">Partnerships</a></li>
+          <li><a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="section-glow min-h-screen pt-24">
+      <div class="relative mx-auto max-w-5xl px-4 py-16 md:px-6 md:py-20">
+        <a href="index.html" class="text-sm font-semibold text-brand-gold hover:underline">← All branding</a>
+        <p class="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">Branding</p>
+        <h1 class="heading-gold mt-2 text-3xl font-extrabold text-white md:text-5xl">Hats</h1>
+        <p class="mt-4 max-w-2xl text-brand-muted">Branded campaign caps produced for World Breastfeeding Week 2025 in Somaliland.</p>
+        <figure class="branding-full mt-8">
+          <img src="../assets/Branding/Hats.png" alt="Hats — full branding artwork" />
+        </figure>
+        <p class="mt-3 text-center text-xs text-white/40">Hats.png</p>
+        <div class="mt-10 flex flex-wrap items-center justify-between gap-4">
+          <a class="branding-explore" href="t-shirt.html">← T-Shirt</a>
+          <a class="text-sm text-brand-muted hover:text-white" href="index.html">Gallery</a>
+          <a class="branding-explore" href="id-card.html">ID Card →</a>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="section-glow section-glow--persist relative overflow-hidden py-8 text-center text-sm text-brand-muted">
+      <div class="relative">
+        <img src="../assets/logo.png" alt="Zoom Digital Agency — ZOOM HD" class="mx-auto mb-4 h-16 w-auto md:h-20" />
+        <p class="font-medium uppercase tracking-[0.25em] text-brand-gold">Your Advertisement Partner</p>
+        <p class="mt-3">&copy; <span id="year">2026</span> Zoom Digital Agency. Hargeisa, Somaliland. All rights reserved.</p>
+      </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+      <i data-lucide="arrow-up" class="h-5 w-5"></i>
+    </button>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
