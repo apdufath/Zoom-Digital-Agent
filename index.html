@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("zoom-theme") === "light") {
+            document.documentElement.classList.remove("dark");
+          } else {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <meta
+      name="description"
+      content="Zoom Digital Agency — Hargeisa, Somaliland. Capture, Create & Connect. Digital marketing, video production, branding, and campaign strategy."
+    />
+    <title>Zoom Digital Agency | Company Profile 2025/26</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: "#C41E24",
+                dark: "#1A1A1A",
+                gold: "#C9A876",
+                light: "#F7F7F7",
+                ink: "#0D0D0D",
+                panel: "#2A1414",
+                muted: "#D1D1D1",
+              },
+            },
+            fontFamily: {
+              sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body class="font-sans antialiased">
+    <a class="skip-link" href="#home">Skip to content</a>
+
+    <!-- =========================================================
+         1. NAVBAR
+         ========================================================= -->
+    <header class="site-header fixed inset-x-0 top-0 z-50">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6"
+        aria-label="Primary"
+      >
+        <a href="#home" class="flex items-center gap-3 shrink-0">
+          <span
+            class="hexagon flex h-10 w-10 items-center justify-center bg-brand-red text-sm font-extrabold text-white"
+            aria-hidden="true"
+            >Z</span
+          >
+          <span class="leading-tight">
+            <span class="block text-[13px] font-extrabold tracking-[0.18em] text-white"
+              >ZOOM</span
+            >
+            <span class="block text-[9px] font-medium tracking-[0.28em] text-brand-gold"
+              >DIGITAL AGENCY</span
+            >
+          </span>
+        </a>
+
+        <ul class="hidden items-center gap-5 lg:flex xl:gap-6">
+          <li><a class="nav-link is-active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#why-us">Why Us</a></li>
+          <li><a class="nav-link" href="#showcase">Showcase</a></li>
+          <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li><a class="nav-link" href="#partnerships">Partnerships</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="Switch to light mode"
+            aria-pressed="true"
+          >
+            <i data-lucide="moon" class="icon-moon h-4 w-4"></i>
+            <i data-lucide="sun" class="icon-sun h-4 w-4"></i>
+          </button>
+          <button
+            id="menu-toggle"
+            class="hamburger lg:hidden"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        id="mobile-menu"
+        class="mobile-panel lg:hidden absolute inset-x-0 top-full border-t border-white/10 bg-black/95 px-4 py-6 backdrop-blur-md"
+      >
+        <ul class="flex flex-col gap-1">
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#home">Home</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#about">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#services">Services</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#why-us">Why Us</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#showcase">Showcase</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#testimonials">Testimonials</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#partnerships">Partnerships</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link block rounded-lg px-3 py-3 text-white/90 hover:bg-white/5" href="#contact">Contact</a>
+          </li>
+          <li class="mt-2 border-t border-white/10 pt-3">
+            <button
+              type="button"
+              class="theme-toggle theme-toggle--menu w-full justify-start gap-3 rounded-lg px-3 py-3 text-left text-white/90 hover:bg-white/5"
+              data-theme-toggle
+              aria-label="Switch to light mode"
+            >
+              <i data-lucide="moon" class="icon-moon h-4 w-4"></i>
+              <i data-lucide="sun" class="icon-sun h-4 w-4"></i>
+              <span class="theme-toggle-label text-sm font-medium">Dark mode</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========================================================
+           2. HERO / HOME
+           ========================================================= -->
+      <section id="home" class="hero section-glow section-glow--persist relative min-h-screen overflow-hidden text-white">
+        <div class="hero-grain" aria-hidden="true"></div>
+
+        <!-- Wave motif overlay -->
+        <svg
+          class="wave-line wave-draw pointer-events-none absolute -bottom-4 left-0 w-[140%] text-brand-red/40"
+          viewBox="0 0 1440 120"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            class="wave-path"
+            d="M0 70 Q120 20 240 70 T480 70 T720 70 T960 70 T1200 70 T1440 70"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path
+            d="M0 90 Q180 40 360 90 T720 90 T1080 90 T1440 90"
+            stroke="#C9A876"
+            stroke-width="1"
+            opacity="0.45"
+          />
+        </svg>
+
+        <div
+          class="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-12 px-4 pb-20 pt-28 md:flex-row md:items-center md:justify-between md:px-6 lg:gap-16"
+        >
+          <div class="max-w-xl reveal">
+            <p class="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-brand-gold">
+              Your Advertisement Partner
+            </p>
+            <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              COMPANY<br />PROFILE<br />
+              <span class="text-brand-red">2025/26</span>
+            </h1>
+            <p class="mt-6 text-base font-medium text-white/80 sm:text-lg">
+              ZOOM DIGITAL AGENCY — Capture, Create &amp; Connect
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn-primary" href="#contact">
+                Get in Touch
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+              <a class="btn-outline" href="#services">Our Services</a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2 flex items-center justify-center" aria-hidden="true">
+            <div class="hero-lens">
+              <span class="lens-core"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           3. ABOUT COMPANY
+           ========================================================= -->
+      <section id="about" class="relative bg-white">
+        <div class="bg-brand-dark relative overflow-hidden py-8 md:py-10">
+          <svg
+            class="wave-line wave-draw absolute right-[-10%] top-1/2 hidden h-16 w-1/2 -translate-y-1/2 text-brand-red/50 md:block"
+            viewBox="0 0 600 80"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path class="wave-path" d="M0 40 Q50 10 100 40 T200 40 T300 40 T400 40 T500 40 T600 40" stroke="currentColor" stroke-width="1.5" />
+            <path d="M0 52 Q70 22 140 52 T280 52 T420 52 T560 52" stroke="#C9A876" stroke-width="1" opacity="0.5" />
+          </svg>
+          <div class="mx-auto max-w-7xl px-4 md:px-6">
+            <h2 class="heading-gold text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+              About Zoom
+            </h2>
+          </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
+          <div class="reveal max-w-4xl space-y-5 text-base leading-relaxed text-neutral-700 md:text-lg">
+            <p>
+              <strong class="text-brand-dark">ZOOM DIGITAL AGENCY</strong> is a leading digital
+              marketing company based in Somaliland, recognized as one of the highest-ranking and
+              most trusted agencies in the region.
+            </p>
+            <p>
+              We specialize in helping businesses, institutions, and organizations grow their
+              online presence, attract customers, and increase revenue through powerful,
+              data-driven digital strategies. With a deep understanding of both the Somaliland
+              market and global trends, we deliver innovative and results-oriented solutions.
+            </p>
+            <p>
+              Our experience extends beyond traditional marketing — we have successfully worked
+              on election campaigns, government institutions, and large-scale business
+              promotions, positioning us as a key driver of digital transformation in Somaliland.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           4. CEO STATEMENT
+           ========================================================= -->
+      <section id="ceo" class="section-glow">
+        <div class="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+          <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,1.4fr)_auto]">
+            <div class="reveal">
+              <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+                Leadership
+              </p>
+              <h2 class="heading-gold text-3xl font-extrabold text-brand-dark dark:text-white md:text-4xl">
+                CEO Statement
+              </h2>
+              <blockquote class="mt-8 space-y-4 text-base leading-relaxed text-neutral-700 dark:text-brand-muted md:text-lg">
+                <p>
+                  “Zoom Digital Agency — we are proud to be part of Somaliland's growing digital
+                  transformation. Our journey has been driven by a clear vision to empower
+                  businesses, institutions, and leaders with the tools and strategies they need
+                  to succeed in the digital world.
+                </p>
+                <p>
+                  Today, we stand among the highest-ranking digital marketing companies in
+                  Somaliland. From supporting business growth to managing impactful campaigns and
+                  institutional visibility, our work reflects dedication, innovation, and
+                  measurable results.
+                </p>
+                <p>
+                  We believe every brand deserves to grow, compete, and lead — and we are here to
+                  make that happen.”
+                </p>
+              </blockquote>
+              <p class="mt-6 font-bold text-brand-dark dark:text-white">Aidarus Abdilahi Ismail</p>
+              <p class="text-sm tracking-wide text-brand-gold">Founder &amp; CEO</p>
+            </div>
+
+            <div class="reveal reveal-delay-2 flex justify-center">
+              <div class="hexagon-frame hexagon-frame--lg">
+                <div class="hexagon hexagon-ring"></div>
+                <!-- Swap this placeholder for: <img src="images/ceo.jpg" alt="Aidarus Abdilahi Ismail"> -->
+                <div
+                  class="hexagon hexagon-photo"
+                  role="img"
+                  aria-label="Placeholder portrait of Aidarus Abdilahi Ismail, Founder and CEO"
+                >
+                  <i data-lucide="user" class="mb-2 h-10 w-10 text-white/40"></i>
+                  <span class="hexagon-initials">AA</span>
+                  <span class="mt-2 px-4 text-center text-[10px] uppercase tracking-widest text-white/50"
+                    >CEO photo</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           5. FOUNDERS / OUR MEMBERS
+           ========================================================= -->
+      <section id="team" class="bg-brand-light">
+        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+          <div class="reveal max-w-3xl">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+              Our Founder
+            </p>
+            <h2 class="heading-gold text-3xl font-extrabold text-brand-dark md:text-4xl">
+              Our Members
+            </h2>
+            <p class="mt-8 text-base leading-relaxed text-neutral-700 md:text-lg">
+              Zoom Digital Agency was founded by visionary entrepreneurs and digital experts
+              based in Somaliland. Recognizing the gap in professional digital marketing
+              services, the founders built a company that delivers international-standard
+              solutions locally. With strong expertise in marketing, media production, branding,
+              and technology, they created a foundation that continues to drive innovation and
+              excellence.
+            </p>
+            <p class="mt-4 font-semibold text-brand-dark">
+              Cayduruus Beershiya
+              <span class="font-normal text-neutral-500"> — CEO and Founder</span>
+            </p>
+          </div>
+
+          <div class="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- Member 1 -->
+            <article class="reveal flex flex-col items-center text-center">
+              <div class="hexagon-frame">
+                <div class="hexagon hexagon-ring"></div>
+                <div
+                  class="hexagon hexagon-photo"
+                  role="img"
+                  aria-label="Placeholder portrait of Aidarus Abdilahi Ismail"
+                >
+                  <span class="hexagon-initials">AA</span>
+                </div>
+              </div>
+              <h3 class="mt-5 text-base font-bold text-brand-dark">Aidarus Abdilahi Ismail</h3>
+              <p class="text-sm text-brand-red">Founder, CEO</p>
+            </article>
+
+            <!-- Member 2 -->
+            <article class="reveal reveal-delay-1 flex flex-col items-center text-center">
+              <div class="hexagon-frame">
+                <div class="hexagon hexagon-ring"></div>
+                <div
+                  class="hexagon hexagon-photo"
+                  role="img"
+                  aria-label="Placeholder portrait of Ahmed Mohamed Adam"
+                >
+                  <span class="hexagon-initials">AM</span>
+                </div>
+              </div>
+              <h3 class="mt-5 text-base font-bold text-brand-dark">Ahmed Mohamed Adam</h3>
+              <p class="text-sm text-brand-red">General Manager</p>
+            </article>
+
+            <!-- Member 3 -->
+            <article class="reveal reveal-delay-2 flex flex-col items-center text-center">
+              <div class="hexagon-frame">
+                <div class="hexagon hexagon-ring"></div>
+                <div
+                  class="hexagon hexagon-photo"
+                  role="img"
+                  aria-label="Placeholder portrait of Abdala Mohamed Adam"
+                >
+                  <span class="hexagon-initials">AB</span>
+                </div>
+              </div>
+              <h3 class="mt-5 text-base font-bold text-brand-dark">Abdala Mohamed Adam</h3>
+              <p class="text-sm text-brand-red">Head Of Production</p>
+            </article>
+
+            <!-- Member 4 -->
+            <article class="reveal reveal-delay-3 flex flex-col items-center text-center">
+              <div class="hexagon-frame">
+                <div class="hexagon hexagon-ring"></div>
+                <div
+                  class="hexagon hexagon-photo"
+                  role="img"
+                  aria-label="Placeholder portrait of Abdisamed Mohamed Nor"
+                >
+                  <span class="hexagon-initials">AN</span>
+                </div>
+              </div>
+              <h3 class="mt-5 text-base font-bold text-brand-dark">Abdisamed Mohamed Nor</h3>
+              <p class="text-sm text-brand-red">Head of Content Creation</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           6. VISION & MISSION
+           ========================================================= -->
+      <section id="vision" class="relative bg-white">
+        <svg
+          class="wave-line wave-draw pointer-events-none absolute left-0 top-0 w-full text-brand-red/20"
+          viewBox="0 0 1440 80"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path class="wave-path" d="M0 40 Q180 10 360 40 T720 40 T1080 40 T1440 40" stroke="currentColor" stroke-width="1.25" />
+        </svg>
+
+        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+          <p class="reveal mb-10 text-center text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+            Zoom Digital — Capture, Create &amp; Connect
+          </p>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="mission-card reveal rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-red/10 text-brand-gold">
+                <i data-lucide="eye" class="h-6 w-6"></i>
+              </div>
+              <h2 class="heading-gold text-2xl font-extrabold text-brand-dark">Vision</h2>
+              <p class="mt-6 text-base leading-relaxed text-neutral-700">
+                To be the #1 digital marketing company in Somaliland and a recognized leader
+                across East Africa.
+              </p>
+            </article>
+
+            <article class="mission-card reveal reveal-delay-1 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-red/10 text-brand-gold">
+                <i data-lucide="target" class="h-6 w-6"></i>
+              </div>
+              <h2 class="heading-gold text-2xl font-extrabold text-brand-dark">Mission</h2>
+              <ul class="mt-6 space-y-3 text-neutral-700">
+                <li class="flex gap-3">
+                  <i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                  <span>To elevate businesses and institutions through digital innovation</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                  <span>To deliver high-impact strategies for local and global audiences</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                  <span>To support sustainable growth for entrepreneurs and organizations</span>
+                </li>
+                <li class="flex gap-3">
+                  <i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                  <span>To set the standard for quality and creativity in digital marketing</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           7. OUR SERVICES / CAPABILITIES
+           ========================================================= -->
+      <section id="services" class="bg-brand-light">
+        <div class="bg-brand-dark relative overflow-hidden py-8 md:py-10">
+          <svg
+            class="wave-line wave-draw absolute right-[-8%] top-1/2 hidden h-16 w-1/2 -translate-y-1/2 text-brand-gold/40 md:block"
+            viewBox="0 0 600 80"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path class="wave-path" d="M0 40 Q50 10 100 40 T200 40 T300 40 T400 40 T500 40 T600 40" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <div class="mx-auto max-w-7xl px-4 md:px-6">
+            <h2 class="heading-gold text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+              Our Services
+            </h2>
+          </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
+          <p class="reveal max-w-3xl text-base text-neutral-700 md:text-lg">
+            At Zoom Digital Agency, we provide end-to-end marketing capabilities engineered for
+            extraordinary results:
+          </p>
+
+          <ul class="reveal mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            <li class="flex items-center gap-2 rounded-full bg-brand-light px-4 py-2.5 text-sm font-medium text-brand-dark">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-brand-red"></i>
+              Creative Production
+            </li>
+            <li class="flex items-center gap-2 rounded-full bg-brand-light px-4 py-2.5 text-sm font-medium text-brand-dark">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-brand-red"></i>
+              Campaign Strategy
+            </li>
+            <li class="flex items-center gap-2 rounded-full bg-brand-light px-4 py-2.5 text-sm font-medium text-brand-dark">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-brand-red"></i>
+              Digital Marketing
+            </li>
+            <li class="flex items-center gap-2 rounded-full bg-brand-light px-4 py-2.5 text-sm font-medium text-brand-dark">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-brand-red"></i>
+              Media &amp; Public Relations
+            </li>
+            <li class="flex items-center gap-2 rounded-full bg-brand-light px-4 py-2.5 text-sm font-medium text-brand-dark">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-brand-red"></i>
+              Content &amp; Storytelling
+            </li>
+          </ul>
+
+          <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <article class="service-card reveal rounded-2xl border border-neutral-200 bg-white p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
+                <i data-lucide="megaphone" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-brand-dark">Digital Marketing</h3>
+            </article>
+            <article class="service-card reveal reveal-delay-1 rounded-2xl border border-neutral-200 bg-white p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
+                <i data-lucide="video" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-brand-dark">Video Production</h3>
+            </article>
+            <article class="service-card reveal reveal-delay-2 rounded-2xl border border-neutral-200 bg-white p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
+                <i data-lucide="calendar-days" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-brand-dark">Media Event Management &amp; Branding</h3>
+            </article>
+            <article class="service-card reveal rounded-2xl border border-neutral-200 bg-white p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
+                <i data-lucide="camera" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-brand-dark">Photo Commercial</h3>
+            </article>
+            <article class="service-card reveal reveal-delay-1 rounded-2xl border border-neutral-200 bg-white p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
+                <i data-lucide="flag" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-brand-dark">Campaign Marketing</h3>
+            </article>
+            <article class="service-card reveal reveal-delay-2 rounded-2xl border border-neutral-200 bg-white p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
+                <i data-lucide="clapperboard" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-brand-dark">Media Marketing Strategy</h3>
+            </article>
+            <article class="service-card reveal sm:col-span-2 lg:col-span-1 rounded-2xl border border-neutral-200 bg-white p-6">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
+                <i data-lucide="search" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-brand-dark">Search Engine Optimizing (SEO)</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           8. WHY CHOOSE US
+           ========================================================= -->
+      <section id="why-us" class="section-glow">
+        <div class="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+          <div class="reveal max-w-2xl">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+              The Zoom Difference
+            </p>
+            <h2 class="heading-gold text-3xl font-extrabold text-brand-dark dark:text-white md:text-4xl">
+              Why Choose Us
+            </h2>
+          </div>
+
+          <ul class="mt-12 grid gap-4 md:grid-cols-2">
+            <li class="why-item reveal flex gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-brand-panel/80 dark:shadow-none">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-red text-white">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-bold text-brand-dark dark:text-white">Top-Ranked in Somaliland</h3>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-brand-muted">Trusted by businesses, institutions, and campaigns</p>
+              </div>
+            </li>
+            <li class="why-item reveal reveal-delay-1 flex gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-brand-panel/80 dark:shadow-none">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-red text-white">
+                <i data-lucide="briefcase" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-bold text-brand-dark dark:text-white">Proven Experience</h3>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-brand-muted">Elections, government, and major campaigns</p>
+              </div>
+            </li>
+            <li class="why-item reveal flex gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-brand-panel/80 dark:shadow-none">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-red text-white">
+                <i data-lucide="map-pin" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-bold text-brand-dark dark:text-white">Local Expertise</h3>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-brand-muted">Deep understanding of the market</p>
+              </div>
+            </li>
+            <li class="why-item reveal reveal-delay-1 flex gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-brand-panel/80 dark:shadow-none">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-red text-white">
+                <i data-lucide="sparkles" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-bold text-brand-dark dark:text-white">Creative Excellence</h3>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-brand-muted">Unique and innovative work</p>
+              </div>
+            </li>
+            <li class="why-item reveal md:col-span-2 flex gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-brand-panel/80 dark:shadow-none">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-red text-white">
+                <i data-lucide="users" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-bold text-brand-dark dark:text-white">Professional Team</h3>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-brand-muted">Skilled and reliable experts</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           9. SHOWCASE / PORTFOLIO
+           ========================================================= -->
+      <section id="showcase" class="bg-white">
+        <div class="bg-brand-dark relative overflow-hidden py-8 md:py-10">
+          <svg
+            class="wave-line wave-draw absolute right-[-8%] top-1/2 hidden h-16 w-1/2 -translate-y-1/2 text-brand-red/40 md:block"
+            viewBox="0 0 600 80"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path class="wave-path" d="M0 40 Q50 10 100 40 T200 40 T300 40 T400 40 T500 40 T600 40" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <div class="mx-auto max-w-7xl px-4 md:px-6">
+            <h2 class="heading-gold text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+              Showcase
+            </h2>
+          </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
+          <p class="reveal max-w-3xl text-base text-neutral-700 md:text-lg">
+            Our portfolio reflects our leadership and impact in Somaliland's digital space. We
+            have successfully delivered:
+          </p>
+          <ul class="reveal mt-6 grid gap-2 text-sm font-medium text-brand-dark sm:grid-cols-2">
+            <li class="flex items-center gap-2">
+              <i data-lucide="chevron-right" class="h-4 w-4 text-brand-red"></i>
+              Business Branding and Marketing Campaigns
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="chevron-right" class="h-4 w-4 text-brand-red"></i>
+              Election and Political Campaign Strategies
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="chevron-right" class="h-4 w-4 text-brand-red"></i>
+              Government and Institutional Communication Projects
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="chevron-right" class="h-4 w-4 text-brand-red"></i>
+              Social Media Growth and Advertising Campaigns
+            </li>
+          </ul>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="showcase-card reveal relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-br from-[#3a1012] via-[#1a1a1a] to-brand-red"
+                role="img"
+                aria-label="Placeholder thumbnail for a business branding campaign"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Business Branding Campaign</h3>
+              </div>
+            </article>
+            <article class="showcase-card reveal reveal-delay-1 relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-br from-[#1a1a1a] via-[#4a1517] to-brand-gold"
+                role="img"
+                aria-label="Placeholder thumbnail for an election campaign strategy"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Election Campaign Strategy</h3>
+              </div>
+            </article>
+            <article class="showcase-card reveal reveal-delay-2 relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-br from-[#2a1a0a] via-[#1a1a1a] to-[#C41E24]"
+                role="img"
+                aria-label="Placeholder thumbnail for government communication"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Government Communication</h3>
+              </div>
+            </article>
+            <article class="showcase-card reveal reveal-delay-3 relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-tr from-brand-red via-[#1a1a1a] to-[#C9A876]"
+                role="img"
+                aria-label="Placeholder thumbnail for social media growth"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Social Media Growth</h3>
+              </div>
+            </article>
+            <article class="showcase-card reveal relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-bl from-[#5a1a1c] via-black to-brand-gold"
+                role="img"
+                aria-label="Placeholder thumbnail for hotel branding"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Hospitality Branding</h3>
+              </div>
+            </article>
+            <article class="showcase-card reveal reveal-delay-1 relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-t from-brand-dark via-[#3d1214] to-[#8a2a2e]"
+                role="img"
+                aria-label="Placeholder thumbnail for healthcare marketing"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Healthcare Marketing</h3>
+              </div>
+            </article>
+            <article class="showcase-card reveal reveal-delay-2 relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-r from-[#1a1a1a] via-brand-red to-[#2a1a0c]"
+                role="img"
+                aria-label="Placeholder thumbnail for telecom partnership"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Telecom Partnership</h3>
+              </div>
+            </article>
+            <article class="showcase-card reveal reveal-delay-3 relative aspect-[4/5] rounded-2xl">
+              <div
+                class="showcase-media absolute inset-0 rounded-2xl bg-gradient-to-br from-black via-[#6b1c20] to-[#C9A876]"
+                role="img"
+                aria-label="Placeholder thumbnail for event coverage"
+              ></div>
+              <div class="showcase-overlay absolute inset-0 flex items-end rounded-2xl p-4">
+                <h3 class="text-sm font-semibold text-white">Event Coverage</h3>
+              </div>
+            </article>
+          </div>
+
+          <aside
+            class="reveal mt-10 rounded-2xl border border-brand-gold/40 bg-brand-dark px-6 py-8 text-white md:px-10"
+          >
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+              Government Showcase
+            </p>
+            <h3 class="mt-2 text-2xl font-extrabold">Institutional Communication at Scale</h3>
+            <p class="mt-3 max-w-3xl text-sm leading-relaxed text-white/75">
+              Zoom Digital Agency supports ministries and public bodies with campaign strategy,
+              content, and visibility — from health and finance to aviation, energy, procurement,
+              and national printing. Replace this callout with project stills when available.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           10. TESTIMONIALS
+           ========================================================= -->
+      <section id="testimonials" class="bg-brand-light">
+        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+          <div class="reveal mb-10 text-center">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+              Clients
+            </p>
+            <h2 class="heading-gold heading-gold--center text-3xl font-extrabold text-brand-dark md:text-4xl">
+              Testimonials
+            </h2>
+            <p class="mt-4 text-sm text-neutral-500">
+              Placeholder quotes — replace with verified client statements when available.
+            </p>
+          </div>
+
+          <div id="testimonial-slider" class="reveal relative mx-auto max-w-3xl">
+            <div class="overflow-hidden rounded-2xl bg-white p-8 shadow-sm md:p-12">
+              <div class="slider-track">
+                <blockquote class="slider-slide px-1">
+                  <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-red/40"></i>
+                  <p class="text-lg leading-relaxed text-neutral-700">
+                    “Working with Zoom Digital Agency transformed how our hospital communicates
+                    with patients. Their campaigns were clear, culturally fluent, and
+                    professionally produced from start to finish.”
+                  </p>
+                  <footer class="mt-6">
+                    <cite class="not-italic font-bold text-brand-dark">Communications Lead</cite>
+                    <p class="text-sm text-neutral-500">Placeholder — Hospital client, Hargeisa</p>
+                  </footer>
+                </blockquote>
+                <blockquote class="slider-slide px-1">
+                  <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-red/40"></i>
+                  <p class="text-lg leading-relaxed text-neutral-700">
+                    “From brand photography to social growth, the Zoom team delivered hospitality
+                    marketing that felt premium and local. Our bookings conversations started
+                    arriving from channels we had never used well.”
+                  </p>
+                  <footer class="mt-6">
+                    <cite class="not-italic font-bold text-brand-dark">General Manager</cite>
+                    <p class="text-sm text-neutral-500">Placeholder — Hotel client, Hargeisa</p>
+                  </footer>
+                </blockquote>
+                <blockquote class="slider-slide px-1">
+                  <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-red/40"></i>
+                  <p class="text-lg leading-relaxed text-neutral-700">
+                    “They understand institutional messaging. Zoom helped us reach the public
+                    with campaigns that were disciplined, on-brand, and measurable — exactly
+                    what a government communication brief requires.”
+                  </p>
+                  <footer class="mt-6">
+                    <cite class="not-italic font-bold text-brand-dark">Program Officer</cite>
+                    <p class="text-sm text-neutral-500">Placeholder — Government / public-sector client</p>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-center gap-4">
+              <button
+                type="button"
+                data-slider-prev
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-brand-dark hover:border-brand-red hover:text-brand-red"
+                aria-label="Previous testimonial"
+              >
+                <i data-lucide="chevron-left" class="h-5 w-5"></i>
+              </button>
+              <div data-slider-dots class="flex items-center gap-2" role="tablist" aria-label="Testimonial slides"></div>
+              <button
+                type="button"
+                data-slider-next
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-brand-dark hover:border-brand-red hover:text-brand-red"
+                aria-label="Next testimonial"
+              >
+                <i data-lucide="chevron-right" class="h-5 w-5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           11. PARTNERSHIPS
+           ========================================================= -->
+      <section id="partnerships" class="bg-white">
+        <div class="bg-brand-dark relative overflow-hidden py-8 md:py-10">
+          <svg
+            class="wave-line wave-draw absolute right-[-8%] top-1/2 hidden h-16 w-1/2 -translate-y-1/2 text-brand-gold/40 md:block"
+            viewBox="0 0 600 80"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path class="wave-path" d="M0 40 Q50 10 100 40 T200 40 T300 40 T400 40 T500 40 T600 40" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <div class="mx-auto max-w-7xl px-4 md:px-6">
+            <h2 class="heading-gold text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+              Partnerships
+            </h2>
+          </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
+          <p class="reveal max-w-3xl text-base text-neutral-700 md:text-lg">
+            Zoom Digital Agency proudly collaborates with:
+          </p>
+          <ul class="reveal mt-6 flex flex-wrap gap-3 text-sm font-medium">
+            <li class="rounded-full bg-brand-light px-4 py-2">Businesses and startups</li>
+            <li class="rounded-full bg-brand-light px-4 py-2">Government institutions</li>
+            <li class="rounded-full bg-brand-light px-4 py-2">NGOs and organizations</li>
+            <li class="rounded-full bg-brand-light px-4 py-2">Campaign teams and public initiatives</li>
+          </ul>
+          <p class="reveal mt-6 max-w-3xl text-neutral-700">
+            We believe strong partnerships create long-term success and meaningful impact.
+          </p>
+
+          <!-- Hospitals -->
+          <h3 class="reveal mt-14 text-lg font-extrabold text-brand-dark">#1 Hospitals</h3>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="partner-card reveal rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Gargaar Multispecialty Hospital
+            </div>
+            <div class="partner-card reveal reveal-delay-1 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              City Hospital
+            </div>
+            <div class="partner-card reveal reveal-delay-2 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Hargeisa Neurology Hospital
+            </div>
+            <div class="partner-card reveal reveal-delay-3 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Ethio-Istanbul General Hospital
+            </div>
+          </div>
+
+          <!-- Hotels -->
+          <h3 class="reveal mt-12 text-lg font-extrabold text-brand-dark">#2 Hotels</h3>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            <div class="partner-card reveal rounded-xl border border-dashed border-neutral-300 bg-brand-light px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Rihanna Hotel
+              <span class="mt-1 block text-[10px] font-normal uppercase tracking-wider text-neutral-500">Placeholder</span>
+            </div>
+            <div class="partner-card reveal reveal-delay-1 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Cunto Fudud iyo Caafimaad
+            </div>
+            <div class="partner-card reveal reveal-delay-2 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Gesh Hotel
+            </div>
+            <div class="partner-card reveal reveal-delay-3 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Assod Hotel
+            </div>
+            <div class="partner-card reveal rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">
+              Social Cafe
+            </div>
+          </div>
+
+          <!-- Companies -->
+          <h3 class="reveal mt-12 text-lg font-extrabold text-brand-dark">#3 Companies</h3>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="partner-card reveal rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">Adal Medical University</div>
+            <div class="partner-card reveal reveal-delay-1 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">Telesom</div>
+            <div class="partner-card reveal reveal-delay-2 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">Soltelco</div>
+            <div class="partner-card reveal reveal-delay-3 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">Somtel</div>
+            <div class="partner-card reveal rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">Bluekom</div>
+            <div class="partner-card reveal reveal-delay-1 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">So Gasho</div>
+            <div class="partner-card reveal reveal-delay-2 rounded-xl border border-neutral-200 px-4 py-6 text-center text-sm font-semibold text-brand-dark">Lis Dairies</div>
+          </div>
+
+          <!-- Government sectors -->
+          <h3 class="reveal mt-12 text-lg font-extrabold text-brand-dark">Government Sectors</h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="reveal rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-2 text-sm text-brand-dark">
+              Wasaarada Horumarinta Caafimaadka JSL
+            </li>
+            <li class="reveal rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-2 text-sm text-brand-dark">
+              Wasaarada Maaliyada JSL
+            </li>
+            <li class="reveal rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-2 text-sm text-brand-dark">
+              Wasaaradda Tamarta &amp; Macdanta JSL
+            </li>
+            <li class="reveal rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-2 text-sm text-brand-dark">
+              Wasaaradda Duulista Hawada iyo Horumarinta Madaaradda JSL
+            </li>
+            <li class="reveal rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-2 text-sm text-brand-dark">
+              Gudida Qandaraasyada Qaranka JSL
+            </li>
+            <li class="reveal rounded-full border border-brand-red/30 bg-brand-red/5 px-4 py-2 text-sm text-brand-dark">
+              Wakaaladda Madbacadda Qaranka JSL
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           12. CONCLUSION / CONTACT
+           ========================================================= -->
+      <section id="contact" class="section-glow section-glow--persist relative overflow-hidden text-white">
+        <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 md:grid-cols-2 md:px-6 md:py-28">
+          <div class="reveal">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-brand-gold">
+              Your Advertisement Partner
+            </p>
+            <h2 class="heading-gold text-3xl font-extrabold text-white md:text-4xl">Zoom Digital Agency</h2>
+            <p class="mt-6 max-w-md text-base leading-relaxed text-brand-muted">
+              Based in Hargeisa, Somaliland. Ready to grow your brand, campaign, or institution
+              — capture, create, and connect with us.
+            </p>
+
+            <ul class="mt-8 space-y-4 text-sm text-brand-muted">
+              <li class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                <span>Hargeisa, Somaliland</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="phone" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                <a class="transition hover:text-white" href="tel:+252612345678">+252 612345678</a>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="mail" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                <a class="transition hover:text-white" href="mailto:info@zoomhd.com">info@zoomhd.com</a>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="globe" class="mt-0.5 h-5 w-5 shrink-0 text-brand-gold"></i>
+                <a class="transition hover:text-white" href="https://www.zoomhd.com" rel="noopener" target="_blank"
+                  >www.zoomhd.com</a
+                >
+              </li>
+            </ul>
+
+            <div class="mt-8 flex gap-3">
+              <a class="social-icon" href="#" aria-label="Facebook (placeholder)">
+                <i data-lucide="facebook" class="h-4 w-4"></i>
+              </a>
+              <a class="social-icon" href="#" aria-label="Instagram (placeholder)">
+                <i data-lucide="instagram" class="h-4 w-4"></i>
+              </a>
+              <a class="social-icon" href="#" aria-label="X / Twitter (placeholder)">
+                <i data-lucide="twitter" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-card reveal reveal-delay-1 rounded-2xl p-6 md:p-8">
+            <h3 class="text-xl font-bold text-white">Get in Touch</h3>
+            <p class="mt-1 text-sm text-brand-muted">Tell us about your project.</p>
+
+            <label class="mt-6 block text-xs font-semibold uppercase tracking-wider text-white/70" for="name">Name</label>
+            <input
+              class="form-field mt-1 w-full rounded-lg px-4 py-2.5 text-sm"
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            />
+
+            <label class="mt-4 block text-xs font-semibold uppercase tracking-wider text-white/70" for="email">Email</label>
+            <input
+              class="form-field mt-1 w-full rounded-lg px-4 py-2.5 text-sm"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+
+            <label class="mt-4 block text-xs font-semibold uppercase tracking-wider text-white/70" for="message">Message</label>
+            <textarea
+              class="form-field mt-1 min-h-[120px] w-full rounded-lg px-4 py-2.5 text-sm"
+              id="message"
+              name="message"
+              placeholder="Tell us about your project"
+              required
+            ></textarea>
+
+            <button class="btn-primary mt-6 w-full" type="submit">Send Message</button>
+            <p id="form-status" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="section-glow section-glow--persist relative overflow-hidden py-8 text-center text-sm text-brand-muted">
+      <div class="relative">
+        <p class="font-medium uppercase tracking-[0.25em] text-brand-gold">Your Advertisement Partner</p>
+        <p class="mt-3">
+          &copy; <span id="year">2026</span> Zoom Digital Agency. Hargeisa, Somaliland. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+      <i data-lucide="arrow-up" class="h-5 w-5"></i>
+    </button>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
