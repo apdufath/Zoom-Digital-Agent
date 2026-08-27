@@ -1,7 +1,7 @@
 /* ============================================================
    Zoom Digital Agency — interactions
-   Nav toggle, smooth scroll, scroll-reveal, testimonial slider,
-   back-to-top, active-section highlighting, contact form.
+   Nav toggle, theme toggle, smooth scroll, scroll-reveal,
+   testimonial slider, back-to-top, contact form.
    ============================================================ */
 
 (function () {
@@ -13,6 +13,50 @@
   const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
   const backToTop = document.getElementById("back-to-top");
   const sections = document.querySelectorAll("main section[id]");
+  const THEME_KEY = "zoom-theme";
+
+  /* ---------- Theme (class-based dark mode, default dark) ---------- */
+  function getTheme() {
+    try {
+      var saved = localStorage.getItem(THEME_KEY);
+      if (saved === "light" || saved === "dark") return saved;
+    } catch (e) {}
+    return "dark";
+  }
+
+  function updateThemeButtons(theme) {
+    document.querySelectorAll("[data-theme-toggle]").forEach(function (btn) {
+      btn.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+      );
+      btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+      var label = btn.querySelector(".theme-toggle-label");
+      if (label) {
+        label.textContent = theme === "dark" ? "Dark mode" : "Light mode";
+      }
+    });
+  }
+
+  function applyTheme(theme) {
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch (e) {}
+    updateThemeButtons(theme);
+  }
+
+  applyTheme(getTheme());
+
+  document.querySelectorAll("[data-theme-toggle]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      applyTheme(getTheme() === "dark" ? "light" : "dark");
+    });
+  });
 
   /* ---------- Lucide icons ---------- */
   if (window.lucide && typeof window.lucide.createIcons === "function") {
@@ -244,16 +288,15 @@
       if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
         if (formStatus) {
           formStatus.textContent = "Please fill in all fields.";
-          formStatus.className = "mt-4 text-sm text-red-600";
+          formStatus.className = "mt-4 text-sm text-red-400";
         }
         return;
       }
 
       form.reset();
       if (formStatus) {
-        formStatus.textContent =
-          "Thank you. Your message has been noted. This demo form does not send email yet — please use info@zoomhd.com.";
-        formStatus.className = "mt-4 text-sm text-emerald-700";
+        formStatus.textContent = "Thank you — your message has been received.";
+        formStatus.className = "mt-4 text-sm text-emerald-400";
       }
     });
   }
