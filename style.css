@@ -255,6 +255,329 @@ html:not(.dark) .hero {
   }
 }
 
+/* ---------- Promo banner (Your Imagination, Our Creativity) ---------- */
+.promo-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  background:
+    radial-gradient(ellipse 55% 80% at 88% 55%, rgba(224, 58, 64, 0.55) 0%, transparent 58%),
+    linear-gradient(105deg, #5a0a0e 0%, #9a171c 42%, #c41e24 72%, #e03a40 100%);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  box-shadow:
+    0 -8px 28px rgba(196, 30, 36, 0.22),
+    0 8px 28px rgba(196, 30, 36, 0.22);
+}
+
+.promo-banner-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.promo-banner-rings {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.promo-banner-inner {
+  z-index: 1;
+}
+
+.promo-banner-inner {
+  z-index: 1;
+}
+
+/* Glass panel — fallback for browsers without backdrop-filter */
+.promo-banner-card {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+@supports (
+  (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))
+) {
+  .promo-banner-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+.promo-banner-logo {
+  border-radius: 0.65rem;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.2rem 0.35rem;
+}
+
+.promo-banner-brand {
+  color: #ffffff;
+}
+
+.promo-banner-brand-sub {
+  color: rgba(255, 200, 200, 0.95);
+}
+
+.promo-banner-heading {
+  color: #ffffff;
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.promo-banner-tagline {
+  position: relative;
+  padding-bottom: 0.45rem;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.promo-banner-tagline-accent {
+  color: #ffb4b4;
+}
+
+.promo-banner-tagline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 11rem;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.85), transparent);
+  border-radius: 2px;
+}
+
+.promo-service-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.75rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+@supports (
+  (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))
+) {
+  .promo-service-item {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+.promo-service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(255, 107, 107, 0.45);
+  color: #ff8a8a;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.promo-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+@supports (
+  (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))
+) {
+  .promo-social-icon {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+.promo-social-icon svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  display: block;
+}
+
+.promo-social-row .promo-social-icon:nth-child(1):hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #ffffff;
+}
+
+.promo-social-row .promo-social-icon:nth-child(2):hover {
+  background: #e4405f;
+  border-color: #e4405f;
+  color: #ffffff;
+}
+
+.promo-social-row .promo-social-icon:nth-child(3):hover {
+  background: #010101;
+  border-color: #010101;
+  color: #ffffff;
+}
+
+.promo-social-row .promo-social-icon:nth-child(4):hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: #ffffff;
+}
+
+.promo-whatsapp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.45rem 0.9rem 0.45rem 0.55rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+@supports (
+  (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))
+) {
+  .promo-whatsapp-chip {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+.promo-whatsapp-chip svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.promo-whatsapp-chip:hover {
+  background: #25d366;
+  border-color: #25d366;
+  transform: translateY(-1px);
+}
+
+.promo-banner-visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-height: 16rem;
+  background: transparent;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.promo-banner-person {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 22rem);
+  max-height: 26rem;
+  margin: 0;
+  object-fit: contain;
+  object-position: bottom right;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 8%,
+    #000 22%,
+    #000 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 8%,
+    #000 22%,
+    #000 100%
+  );
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.22));
+}
+
+@media (min-width: 768px) {
+  .promo-banner-visual {
+    align-self: stretch;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100%;
+    margin-right: 0;
+    background: transparent;
+  }
+
+  .promo-banner-person {
+    max-width: min(38vw, 20rem);
+    max-height: min(34rem, 100%);
+    object-fit: contain;
+    object-position: bottom right;
+  }
+}
+
+@media (min-width: 1024px) {
+  .promo-banner-visual {
+    position: relative;
+    min-height: 28rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background: transparent;
+  }
+
+  .promo-banner-person {
+    position: absolute;
+    right: -0.5rem;
+    bottom: 0;
+    width: auto;
+    max-width: min(420px, 44%);
+    max-height: calc(100% + 0.25rem);
+    height: auto;
+    object-fit: contain;
+    object-position: bottom right;
+  }
+}
+
+@media (max-width: 767px) {
+  .promo-banner-person {
+    max-height: 16rem;
+    max-width: min(100%, 16rem);
+    margin-inline: auto;
+  }
+
+  .promo-banner-visual {
+    justify-content: center;
+  }
+}
+
 /* ---------- Hexagon photo frames ---------- */
 .hexagon {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -1036,7 +1359,7 @@ html:not(.dark) .theme-toggle .icon-sun {
 .back-to-top {
   position: fixed;
   right: 1.25rem;
-  bottom: 1.25rem;
+  bottom: 5.5rem; /* stacked above WhatsApp float */
   z-index: 40;
   width: 48px;
   height: 48px;
@@ -1061,6 +1384,68 @@ html:not(.dark) .theme-toggle .icon-sun {
 
 .back-to-top:hover {
   background: var(--red-dark);
+}
+
+/* ---------- Floating WhatsApp ---------- */
+.whatsapp-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.55);
+  filter: brightness(1.05);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.whatsapp-float-icon {
+  position: relative;
+  z-index: 1;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: block;
+}
+
+.whatsapp-float-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: rgba(37, 211, 102, 0.55);
+  animation: whatsapp-ping 2s ease-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes whatsapp-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
 }
 
 /* ---------- Form + contact card ---------- */
@@ -1113,12 +1498,17 @@ html:not(.dark) .form-field::placeholder {
 }
 
 /* Social outline buttons */
+.social-row {
+  align-items: center;
+}
+
 .social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
   border-radius: 9999px;
   border: 1px solid rgba(209, 209, 209, 0.45);
   color: var(--muted);
@@ -1129,6 +1519,23 @@ html:not(.dark) .form-field::placeholder {
   background: var(--red);
   border-color: var(--red);
   color: var(--white);
+}
+
+.social-icon--whatsapp:hover {
+  background: #25d366;
+  border-color: #25d366;
+  color: #ffffff;
+}
+
+.social-icon:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.social-svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
 }
 
 /* ---------- Custom scrollbar (webkit) ---------- */
@@ -1211,6 +1618,7 @@ html:not(.dark) .form-field::placeholder {
   .slider-track,
   .wbw-track,
   .campaign-marquee-track,
+  .whatsapp-float-ping,
   .showcase-card .showcase-media,
   .btn-primary,
   .btn-outline {
