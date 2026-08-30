@@ -693,25 +693,147 @@ html:not(.dark) .theme-toggle .icon-sun {
   }
 }
 
-/* ---------- Showcase hover zoom ---------- */
+/* ---------- Showcase cards ---------- */
+.showcase-topics li {
+  min-height: 1.5rem;
+}
+
 .showcase-card {
+  position: relative;
   overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  background: #1a1a1a;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .showcase-card .showcase-media {
-  transition: transform 0.5s ease;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.55s ease;
+}
+
+.showcase-card:hover {
+  border-color: rgba(196, 30, 36, 0.7);
+  box-shadow: 0 16px 36px rgba(196, 30, 36, 0.18), 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 .showcase-card:hover .showcase-media {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .showcase-card .showcase-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent 55%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.35) 42%, transparent 68%);
+  pointer-events: none;
+}
+
+.showcase-tag {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.15rem 0.65rem;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.showcase-view-case {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.showcase-card:hover .showcase-view-case {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .showcase-card--carousel:hover .showcase-media {
   transform: none;
+}
+
+.showcase-card--carousel .showcase-overlay {
+  pointer-events: none;
+}
+
+/* Featured government callout */
+.showcase-callout {
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(196, 30, 36, 0.45);
+  background:
+    linear-gradient(135deg, rgba(42, 20, 20, 0.95) 0%, rgba(13, 13, 13, 0.98) 55%, rgba(26, 10, 12, 0.95) 100%);
+  box-shadow: 0 16px 40px rgba(196, 30, 36, 0.12), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.showcase-callout-media {
+  position: relative;
+  min-height: 12rem;
+  overflow: hidden;
+  background: #111;
+}
+
+.showcase-callout-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 12rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.showcase-callout-body {
+  padding: 1.75rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .showcase-callout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: stretch;
+  }
+
+  .showcase-callout-media {
+    min-height: 100%;
+  }
+
+  .showcase-callout-media img {
+    min-height: 100%;
+    position: absolute;
+    inset: 0;
+  }
+
+  .showcase-callout-body {
+    padding: 2.25rem 2rem;
+  }
 }
 
 /* World Breastfeeding Week 2025 — campaign identity (not Zoom red/black) */
