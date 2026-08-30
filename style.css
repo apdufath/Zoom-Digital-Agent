@@ -490,6 +490,146 @@ html:not(.dark) .theme-toggle .icon-sun {
   border-color: rgba(196, 30, 36, 0.35);
 }
 
+/* ---------- Partnership logo grid ---------- */
+.partner-category {
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+.partner-category + .partner-category {
+  margin-top: 4rem;
+}
+
+.partner-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.partner-heading::after {
+  content: "";
+  display: block;
+  flex: 0 0 100%;
+  width: 48px;
+  max-width: 48px;
+  height: 2px;
+  margin-top: 0.15rem;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 2px;
+}
+
+.partner-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  box-shadow: 0 4px 12px rgba(196, 30, 36, 0.35);
+}
+
+.partner-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .partner-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .partner-logo-grid--hotels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .partner-logo-grid {
+    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .partner-logo-grid--hospitals {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .partner-logo-grid--hotels {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .partner-logo-grid--gov {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.partner-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8.25rem;
+  margin: 0;
+  padding: 1.5rem 1.75rem;
+  background: #fafafa;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.partner-logo-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  filter: grayscale(100%);
+  transition: filter 0.35s ease;
+}
+
+.partner-logo-card:hover {
+  transform: scale(1.05);
+  border-color: rgba(196, 30, 36, 0.45);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(196, 30, 36, 0.35),
+    0 0 28px rgba(196, 30, 36, 0.28);
+}
+
+.partner-logo-card:hover img {
+  filter: grayscale(0%);
+}
+
+@media (min-width: 768px) {
+  .partner-logo-card {
+    height: 8.75rem;
+    padding: 1.75rem 2rem;
+  }
+}
+
 /* ---------- Showcase hover zoom ---------- */
 .showcase-card {
   overflow: hidden;
@@ -821,6 +961,62 @@ html:not(.dark) .form-field::placeholder {
   background: var(--red);
 }
 
+/* ---------- Campaign marquee (Partnerships) ---------- */
+.campaign-marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.campaign-marquee-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: scroll-left 30s linear infinite;
+}
+
+.campaign-marquee:hover .campaign-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.campaign-thumb {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11rem;
+  height: 7rem;
+  margin: 0 1rem 0 0;
+  padding: 0.65rem 0.85rem;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.campaign-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .campaign-thumb {
+    width: 13rem;
+    height: 7.5rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -829,6 +1025,7 @@ html:not(.dark) .form-field::placeholder {
   .wave-draw .wave-path,
   .slider-track,
   .wbw-track,
+  .campaign-marquee-track,
   .showcase-card .showcase-media,
   .btn-primary,
   .btn-outline {
